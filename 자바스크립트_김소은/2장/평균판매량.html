@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var sec1 = 1200;
+    var sec2 = 1300;
+    var sec3 = 1000;
+    var av = (sec1 + sec2 + sec3) / 3;
+
+    var sec4 = parseInt(prompt("4분기 판매량을 입력하세요"));
+    // prompt 입력 받을 땐 기본적으로 문자열로 입력받음
+    // 그래서 숫자가 필요할 땐 int로 변환해줘야 함(parseInt)
+
+    sec4>=av? document.write("판매량이 평균 이상입니다"):document.write("판매량이 평균 미달입니다");
+
+
+  </script>
+</body>
+</html>

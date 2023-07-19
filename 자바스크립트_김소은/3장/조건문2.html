@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 입력했을 때는 입력값이 들어가기 때문에 true로 인식 -> if(true)
+    // 입력하지 않으면 아무것도 없기 때문에 false로 인식 -> if(false)
+    // 0, null, ""(빈문자), undefined는 조건식에 입력되면 false로 반환
+
+    var userName = prompt("방문자의 이름은?");
+
+    if(userName) {
+      document.write(userName + "님 반갑습니다! 방문을 환영합니다.");
+    }
+  </script>
+</body>
+</html>

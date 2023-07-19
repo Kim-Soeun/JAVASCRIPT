@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <script>
+   var id="자바";
+   var password="1234";
+
+   var user_id = prompt("아이디를 입력하세요");
+   var user_password = prompt("비밀번호를 입력하세요");
+
+  // 아이디와 비번이 모두 맞으면 환영합니다 출력
+  // 아이디는 맞는데 비번이 틀리면 비밀번호가 틀립니다 출력
+  // 아이디가 틀리면 존재하지 않는 아이디입니다 출력
+
+  if (user_id==id) {
+    if (user_password==password) {
+      alert("환영합니다");  // alert : 경고창에 띄우는 출력
+    } else {
+      alert("비밀번호가 틀립니다");
+    }
+  } else {
+    alert("존재하지 않는 아이디입니다");
+    location.reload();      // if문 다시 실행(새로고침)
+  }
+
+  </script>
+</body>
+</html>
