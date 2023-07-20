@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+  <style>
+    .container {
+      width: 300px;
+      border: 2px solid black;
+      text-align: center;
+      display: inline-block;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    
+    // script 속 태그를 사용하려면 document.write(""); 사용해야 적용이 됨
+    for(var i=2; i<=9; i++) {
+      document.write("<div class='container'>");
+      document.write("<h1>" + "구구단 " + i + "단" + "</h1>");
+      for(var j=1; j<=9;j++) {
+        document.write("<h2>" + i + " * " + j + "=" + i*j + "</h2>");
+      }
+    document.write("</div>");
+    }
+   
+  </script>
+ 
+</body>
+</html>
