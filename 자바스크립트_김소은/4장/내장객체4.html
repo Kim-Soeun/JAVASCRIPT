@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+  <style>
+    #circle {
+      width: 250px;
+      border: 2px solid black;
+      border-radius: 50%;
+      background-color: lightblue;
+      margin: 10px auto;
+      padding: 20px;
+      text-align: center;
+    }
+    #red {
+      color: red;
+      font-size: 1.5em;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    var now = new Date("2023-07-21");
+
+    // 제대 날짜
+    var endDay = new Date("2024-09-01");  // 9월로 인식
+    var endDay = new Date("2024-9-1");    // 9월로 인식
+    // var endDay = new Date(2024,9,1);   
+    //월을 따로 입력하면 기존 월에서 1을 빼야함
+    // new Date에서 월은 0~11까지로 표현됨 9를 쓰면 실제로는 10월로 인식
+
+    var restDay = endDay.getTime() - now.getTime();
+    var result = Math.ceil(restDay / (60*1000*60*24));
+    document.write("<div id='circle'>");
+    document.write("<h1>제대 날짜</h1>", "<br>");
+    document.write("<p>" + "<span id='red'>"+result+"</span>" +  "일 남으셨습니다</p>");
+    document.write("<p>이제 곧 집에가요</p>", "<br>");
+    document.write("축하합니다");
+    document.write("</div>");
+
+
+  </script>
+</body>
+</html>

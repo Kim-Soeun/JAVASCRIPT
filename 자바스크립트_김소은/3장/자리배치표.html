@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+  <style>
+    table, tr, td {
+      border: 1px solid black;
+      border-collapse: collapse ;
+      margin: 20px auto;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <script>
+
+    // memNum : 전체 인원수, colNum : 표의 칸 개수, line : 줄 개수
+
+    var memNum = parseInt(prompt("총 인원수를 입력하세요"));
+    var colNum = parseInt(prompt("한 줄에 인원수를 입력하세요"));
+    var line;
+    if(memNum%colNum==0) {
+      line = (memNum/colNum);
+    } else {
+      line = (memNum/colNum) +1;
+    }
+    
+
+    document.write("<table>");
+    for(var i=0; i<line; i++) {
+      document.write("<tr>");
+        for(var j=1; j<=colNum; j++) {
+          seatNo = i * colNum + j;    // 좌석번호 설정
+          if (seatNo > memNum) break; // 좌석번호가 전체 인원수 넘지 않도록 설정
+          document.write("<td>좌석 " + seatNo + "</td>");
+        }    
+        document.write("</tr>");
+      }
+      document.write("</table>");
+  </script>
+</body>
+</html>
