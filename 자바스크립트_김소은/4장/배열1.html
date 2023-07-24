@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var a = new Array();
+    a[0] = "김영철";
+    a[1] = 49;
+    a[2] = "따르릉 내가 니 오빠야";
+    
+    for(var i=0; i<a.length; i++) {
+      document.write(a[i], "<br>")
+    }
+
+    // 위와 같음 : i는 0부터 2까지 반복되며, a의 인덱스값 0,1,2를 화면에 출력함
+    for(i in a) {
+      document.write(a[i], "<br>");
+    }
+  </script>
+</body>
+</html>
