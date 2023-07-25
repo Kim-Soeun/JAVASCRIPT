@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var address = prompt("당신의 주소는?");
+
+    document.write(address.charAt(0), "<br>");  // 첫글자 출력
+    document.write(address.substring(0,6), "<br>"); // 1-5번째 글자 출력
+
+    var a = address.split(" ");
+    document.write(a[0], "<br>"); // " "을 기준으로 문자 데이터 나누어 출력
+    document.write(a[1], "<br>");
+
+
+  </script>
+</body>
+</html>

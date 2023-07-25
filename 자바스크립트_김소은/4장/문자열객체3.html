@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+ 
+</head>
+<body>
+
+  <script>
+
+    var name = prompt("당신의 이름은?");
+    var ssn = prompt("당신의 주민번호는?");
+
+  // 예) 홍길동 120312-3125774
+  // 출력결과는 -> 홍길동, 120312-3******
+
+
+  var ssn2 = ssn.substring(0, 8).concat("******");   //  concat : 두 문자열 연결
+  document.write(name + ", " + ssn2);
+
+  var today = new Date(); 
+  document.write(today);
+   
+  </script>
+</body>
+</html>

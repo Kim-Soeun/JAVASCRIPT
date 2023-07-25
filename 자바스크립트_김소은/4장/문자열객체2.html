@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+  <style>
+    table, tr, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    table {
+      width: 500px;
+    }
+    td {
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+    <table>
+      <tr>
+        <td>이름</td>
+        <td id="name"></td>
+      </tr>
+      <tr>
+        <td>소속</td>
+        <td id="area1"></td>
+      </tr>
+      <tr>
+        <td>선거구</td>
+        <td id="area2"></td>
+      </tr>
+    </table>
+  
+
+  <script>
+
+    var name = prompt("당신의 이름은?");
+    var address = prompt("당신의 주소는?");
+
+    var area = address.split(" ");      // 지정한 문자(" ")를 기준으로 문자 데이터를 나누어 배열에 저장 후 반환
+
+    document.querySelector('#name').innerHTML = name;
+    document.querySelector('#area1').innerHTML = area[0];
+    document.querySelector('#area2').innerHTML = area[1];
+
+  </script>
+</body>
+</html>

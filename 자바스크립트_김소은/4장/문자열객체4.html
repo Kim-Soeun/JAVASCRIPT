@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+ 
+</head>
+<body>
+
+  <script>
+
+   var email = prompt("이메일을 입력해 주세요");
+
+   // email에 @가 붙어 있지 않거나 도메인이 kr, com, net으로 끝나지 않으면
+   // 이메일 형식이 올바르지 않습니다 출력
+   // 맞게 입력했으면 해당 이메일 출력
+
+   var num = email.indexOf("@");
+   var domain = email.split(".");
+   var last = domain[domain.length-1];
+
+   if (num > 0 && (last=="kr" || last=="com" || last=="net")) {
+    document.write(email);
+   } else {
+    document.write("이메일 형식이 올바르지 않습니다");
+   }
+      
+  </script>
+</body>
+</html>
