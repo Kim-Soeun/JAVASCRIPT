@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <script>
+
+    var count = 0;
+
+    myFnc();                                          // 일반함수 호출문
+
+    function myFnc() {                                // 일반함수 정의문
+      count++;
+      document.write("안녕하세요" + count, "<br>");   
+    }
+
+    // 자바와 다르게 호출문 먼저 선언하고 뒤에 함수를 생성해도 불러올 수 있다(일반함수)
+
+    myFnc();
+
+
+    // theFnc();
+    // 익명함수는 theFnc 생성 전에 호출하면 찾아갈 수 없음
+   
+    var theFnc = function() {                           // 익명 함수(함수의 변수명이 선언 되지 않은 형태)
+      count++;
+      document.write("byte" + count, "<br>");
+    }
+
+    theFnc();
+
+
+
+  </script>
+</body>
+</html>

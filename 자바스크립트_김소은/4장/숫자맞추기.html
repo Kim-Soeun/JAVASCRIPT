@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+  <style>
+   div {
+    width: 400px;
+    height: 400px;
+    border: 1px solid black;
+    border-radius: 50%;
+    text-align: center;
+    margin: 20px auto;
+   }
+   h1 {
+    margin-top: 120px;
+   }
+  </style>
+</head>
+<body>
+  
+ <div>
+ <h1>숫자 맞추기 게임</h1>
+ <p>당신이 맞출 숫자 : <span id="myNum"></span></p> 
+ <p id="comNum"></p>
+ <button onclick="clearInterval(auto)">스톱</button>
+ </div>
+
+  <script>
+
+    document.querySelector("#myNum").innerHTML = Math.ceil(Math.random()*10);
+
+    var auto = setInterval(function() {
+      var comNum = Math.ceil(Math.random()*10);
+      document.querySelector("#comNum").innerHTML = comNum
+    }, 100);
+  </script>
+</body>
+</html>
