@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 매개변수가 있는 함수 생성하세요
+    // 사용자가 숫자를 입력하면 1부터 사용자가 입력한 숫자까지 
+    // 합계를 구하는 함수 sum을 만들어 보세요
+
+    var userNum = parseInt(prompt("숫자를 입력하세요"));
+
+    function sum(num) {
+      var sum = 0;
+      for(var i=1; i<=num; i++) {
+        sum += i;
+      }
+      document.write("1부터 " + num + "까지의 합계 : " + sum);
+    }
+
+    sum(userNum);
+
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+  <style>
+    #item {
+      position: relative;
+      width: 500px;
+      height: auto;
+      padding: 15px 20px;
+      margin: auto;
+    }
+    button {
+      background-color: rgba(255, 255, 255, 0.945);
+      padding: 5px;
+      border: 1px solid #ccc;
+      font-size: 0.8em;
+    }
+    .over {
+      position: absolute;
+      left: 30px;
+      bottom: 30px;
+    }
+    .detail {
+      width: 400px;
+      text-align: left;
+      line-height: 1.8;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="item">
+    <img src="images/flower.jpg">
+    <button class="over" id="open" onclick="show();">상세 설명 보기</button>
+    <div id="desc" class="detail">
+      <h4>카라</h4>
+      <p>꽃말 : 순수, 천년의 사랑, 순결
+      <br>5~8월에 피며 추위에 약함
+      <br>부케로 많이 사용된다
+    </p>
+    <button id="close" onclick="hide();">상세 설명 닫기</button>
+    </div>
+  </div>
+
+
+  <script>
+
+    function show() {
+      document.querySelector('#desc').style.display = "block"; 
+      // id가 desc인 태그에 스타일 적용
+      // display가 block 형태로 화면에 보이게 함
+      document.querySelector('#open').style.display = "none";
+       // id가 open인 태그에 스타일 적용
+      // display가 화면에 보이지 않게 함
+    }
+
+    function hide() {
+      document.querySelector('#desc').style.display = "none";
+      document.querySelector('#open').style.display = "block";
+
+    }
+
+  </script>
+</body>
+</html>
