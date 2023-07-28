@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var num=0;
+    function sum() {
+      num++;
+      document.write(num, "<br>");
+
+      if(num==100) return; // 100에서 끝나는 return 써주지 않으면 무한반복됨
+
+      sum();     // 함수가 끝나기 전에 또 호출하기 때문에 무한 반복됨
+    }
+    sum();
+  </script>
+  
+</body>
+</html>

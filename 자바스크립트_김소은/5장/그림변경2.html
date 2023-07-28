@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+  <style>
+    #container {
+      position: relative;
+      width : 400px;
+      height : 200px;
+    }
+    #bt{                  /* button에 설정하면 두개 다 같은 위치에 오기 때문에 겹쳐서 하나 안 보임 */
+      position: absolute;
+      bottom: 5px;
+      left: 20px;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="container">
+    <p>
+      <img src="images/mountain1.jpg" id="photo">
+    </p>
+    <p id="bt">
+      <button onclick="gallery(0)">이전</button>
+      <button onclick="gallery(1)">다음</button>
+    </p>
+  </div>
+
+  <script>
+    var num=1;
+    function gallery(direct) {
+      if(direct) {
+        if(num==4) {
+        num=1;
+      } else {
+        num++;
+      }
+     
+     
+      } else {
+        if(num==1) {
+        num=4;
+     } else {
+        num--;
+     } 
+      }
+
+      var imgTag = document.getElementById("photo");
+      imgTag.setAttribute("src", "images/mountain" + num + ".jpg")
+    }
+
+  </script>
+</body>
+</html>
