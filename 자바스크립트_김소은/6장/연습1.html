@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <!-- 오프라인 방식 -->
+
+  <!-- 올바른 적용 -->
+  <script>                  // body 문서를 먼저 불러온 뒤에 실행해야 함
+    $(function() {          // == $(document).ready(function() {  
+      $("#txt").css("color","red");
+    });
+    </script>
+
+
+    <!-- // 잘못된 적용 -->
+    <!-- <script>           // body가 생성되기 이전에 선택자가 먼저 실행되어 선택자로 문서 객체를 선택할 수 없음        
+      $("#txt").css("color","red");
+      </script> -->
+
+
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+  <!-- 온라인 방식 -->
+
+</head>
+<body>
+  <p id="txt">내용</p>
+    
+</body>
+</html>
