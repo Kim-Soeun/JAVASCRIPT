@@ -17,6 +17,8 @@
   <script>
     function j_test(a){
       $(a).nextAll().attr("src","images/huk2.gif");
+      // prevAll : 선택한 요소를 기준으로 이전에 오는 전체 형제 요소를 선택
+      // nextAll : 선택한 요소를 기준으로 이후에 오는 전체 형제 요소를 선택
 
       setTimeout(function(){
         $(a).nextAll().attr("src","images/huk1.gif");
