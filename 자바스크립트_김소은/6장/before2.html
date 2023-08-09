@@ -19,8 +19,8 @@
 
     #main #new {
       position: relative;
-      top: -100px;
-      z-index: 10;
+      top: 0px;
+      z-index: 1;
     }
   </style>
 
@@ -37,7 +37,7 @@
         // next : 바로 다음 형제 요소 하나 선택하여 css 스타일 변경
     } else {
         $("#main #dogbox").before("<img id='new' src='" + src + "'>");
-        $("#main #dogbox").prev().animate({top:0}, 1000, "easeOutBounce");
+        $("#main #dogbox").prev().animate({top:300}, 1000, "easeOutBounce");
 
       } 
      
