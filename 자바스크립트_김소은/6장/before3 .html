@@ -71,6 +71,8 @@
     function j_test_remove() {
       $('#main img:not([name=firstimg])').animate({top:'-=300', opacity:0}, 1000, function(){
         $(this).remove();
+        // 애니메이션이 완료된 후 실행되는 콜백함수
+        // $(this)는 애니메이션이 적용된 이미지를 나타냄 
       });
     }
 

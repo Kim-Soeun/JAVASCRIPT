@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script>
+    $(function(){
+      $("#wrap p:hidden").css({"display":"block","background":"#ff0"});
+      // id가 wrap인 부분 중에 숨겨진 요소에 css 적용
+      // 숨겨진 부분 css 적용되어 화면에 나타남
+    });
+
+    $(function(){
+      $("#wrap p:hidden").css({"display":"block","background":"#ff0"});
+
+      var z1 = $("#zone1 :selected").val();
+      console.log(z1);
+
+      $("#main [type=radio]").bind('click',test);
+      // type이 radio인 것 중에 클릭한 요소에 test 함수 적용
+
+      function test() {
+        var txt = '';
+        txt = $('#main [type=radio]:checked').val();
+        // val(): 선택된 라디오 버튼의 값을 가져오는 메서드
+        // 선택된 라디오 버튼의 값(value)을 반환
+        $('#main textarea').val(txt + '형');
+      }
+    });
+  </script>
+</head>
+<body>
+  <div id="wrap">
+    <p>내용1</p>
+    <p style="display: none">내용2</p>
+    <!-- display : none  숨김처리됨 -->
+    <p>내용3</p>
+
+    <form action="#">
+      <!-- 폼 데이터를 서버로 보낼 때 해당 데이터가 도착할 URL을 명시 -->
+      <!-- "#"을 사용하면 다른 페이지로 이동하지 않고 현재 페이지 상에서만 동작 -->
+      <p id="zone1">
+        <select name="course" id="course">
+          <option value="opt1">짜장</option>
+          <option value="opt2">짬뽕</option>
+          <option value="opt3">탕수육</option>
+        </select>
+      </p>
+    </form>
+
+    <div id="main">
+      <b>당신의 혈액형은?</b><br>
+      <input type="radio" name="main" value="A" >A<br>
+      <!-- input, br 태그는 단일 태그이므로 </input></br> 닫아주지 않아도 됨 -->
+      <input type="radio" name="main" value="B" >B<br>
+      <input type="radio" name="main" value="AB" >AB<br>
+      <input type="radio" name="main" value="O" >O<br>
+      <br>
+      <textarea></textarea>
+    </div>
+</body>
+</html>
