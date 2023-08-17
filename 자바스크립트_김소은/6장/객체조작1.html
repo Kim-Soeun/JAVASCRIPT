@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script>
+
+    // $("요소선택").html(); : 선택한 요소의 하위 요소를 가져옴 
+    // $("요소선택").html("새 요소"); : 선택한 요소의 하위 요소 제거하고 그 위치에 새 요소 생성
+    
+    // $("요소선택").text(); : 선택한 요소가 감싸는 모든 텍스트를 가져옴 
+    // $("요소선택").text("새 텍스트"); : 선택한 요소의 하위 요소 모두 제거, 지정한 텍스트 생성 
+    
+
+    $(function(){
+      var result_1 = $("#sec_1").html();
+      $("#sec_3").html(result_1);
+     // sec_1 하위요소를 가져와서 sec_3에 똑같이 넣어줌
+
+    
+     $("#sec_4").html("<h2>속성 추가</h2>");
+     // sec_4에 "<h2>속성 추가</h2>" 추가
+
+     var result_2 = $("#sec_2").text();
+      $("#sec_3 h2").text(result_2);
+     // #sec_2 안에 있는 글자들을 result_2에 넣어줌
+     // sec_3 h2 태그 안에 result_2 내용 넣어줌
+
+    });
+  </script>
+</head>
+<body>
+  <h1>
+    <strong>객체 조작 및 생성</strong>
+  </h1>
+  <section id="sec_1">
+    <h2>
+      <em>html()</em>
+    </h2>
+    <p>내용1</p>
+  </section>
+  <section id="sec_2">
+    <h2>
+      <em>텍스트()</em>
+    </h2>
+    <p>내용2</p>
+  </section>
+  <section id="sec_3">
+
+  </section>
+  <section id="sec_4">
+
+  </section>
+</body>
+</html>
