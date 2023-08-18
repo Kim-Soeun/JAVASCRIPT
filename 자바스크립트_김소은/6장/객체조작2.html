@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+  <style>
+    section {
+      display: inline-block;
+    }
+  </style>
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script>
+    function game() {
+      // 사용자 선택
+      var user = prompt("당신의 선택은?");
+      $("#result").text(user);
+      var userNum = 0;
+      if(user=='가위') {
+        userNum = 1;
+      } else if(user=='바위') {
+        userNum = 2;
+      } else if(user=='보') {
+        userNum = 3;
+      } else {
+        alert("잘못 입력했어요");
+        location.reload();
+      }
+      $("#sec_2 img").attr('src','images/math_img_' + userNum + '.jpg');
+
+
+      // 컴퓨터 선택
+      var comNum = Math.ceil(Math.random()*3);
+      $("#sec_1 img").attr('src','images/math_img_' + comNum + '.jpg');
+
+
+      // 결과출력
+      var result;
+      if(userNum==comNum) {
+        result = '비겼습니다';
+      } else{
+      if(userNum==1) {
+        if(comNum==2) {
+          result = '컴퓨터 승';
+        } else {
+          result = '사용자 승';
+        }
+      } else if(userNum==2) {
+        if(comNum==1) {
+          result = '사용자 승';
+        } else {
+          result = '컴퓨터 승';
+        }
+      } else if(userNum==3){
+        if(comNum==1) {
+          result = '컴퓨터 승';
+        } else {
+          result = '사용자 승';
+        } 
+      } 
+    }
+    $("#result").text(result);
+  }
+  </script>
+</head>
+<body>
+  <h1>
+    <strong>신나는 가위바위보 게임</strong>
+  </h1>
+  <section id="sec_1">
+    <h2> 컴퓨터 </h2>
+    <p>
+      <img src="images/math_img_1.jpg" alt="가위" border="2">
+    </p>
+  </section>
+  <section id="sec_2">
+    <h2> 사용자 </h2>
+    <p>
+      <img src="images/math_img_1.jpg" alt="가위" border="2">
+      <!-- alt : 대체 텍스트를 지정, 이미지가 로드되지 못할 경우 스크린 리더가 읽어줄 내용 -->
+      <!-- border : 이미지 주위에 테두리 생성, 숫자는 두께 설정 -->
+    </p>
+  </section>
+  <br>
+  <button type="button" onclick="game()">게임 시작</button>
+  <br>
+  <h1> 게임 결과 </h1>
+  <h2 id="result"></h2>
+</body>
+</html>
