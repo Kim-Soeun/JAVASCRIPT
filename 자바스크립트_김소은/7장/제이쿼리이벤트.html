@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script>
+    $(function() {
+      $(".btn1").click(function(){
+        $(".btn1").parent().next().css("color", "red");
+        // parent().next() : 부모 요소의 바로 다음 요소(첫번째 버튼)
+      });
+
+      $(".btn2").on({
+        "mouseover focus" : function(){
+          $(".btn2").parent().next().css("color","blue");
+          // mouseover : 마우스를 버튼2에 올려놓으면 css 적용
+          // focus : 버튼에 포커스 맞춰져 있을 때(테두리 색깔 보일 때) css 적용
+        },
+        "mouseout blur" : function(){
+          $(".btn2").parent().next().css("color","gray");
+          // mouseout blur : 마우 스를 버튼2 위에서 빼면 css 적용
+          // blur : 포커스가 아웃될 때(테두리 색깔 안보일 때) css 적용
+        }
+
+      });
+    });
+  </script>
+</head>
+<body>
+  <p>
+    <button class="btn1">버튼1</button>
+  </p>
+  <p>내용1</p>
+  <p>
+    <button class="btn2">버튼2</button>
+  </p>
+  <p>내용2</p>
+</body>
+</html>
