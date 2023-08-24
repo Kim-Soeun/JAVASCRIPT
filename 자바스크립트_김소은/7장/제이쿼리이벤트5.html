@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script>
+    $(function(){
+      $(".btn1").on("click",function(e){
+        e.preventDefault();                  // preventDefault : 이벤트의 기본기능 막음(클릭시 사이트로 이동 막음)
+        $(".txt1").css("background", "red");
+      });
+
+      
+      $(".btn3").on("dblclick",function(){   // dblclick : 마우스를 더블클릭 했을 때 이벤트가 발생
+        $(".txt3").css("background", "yellow");       
+      });
+    });
+  </script>
+</head>
+<body>
+  <p>
+    <a href="http://www.naver.com" class="btn1">네이버</a>
+  </p>
+  <p class="txt1">내용1</p>
+  <p>
+    <button class="btn3">버튼3</button>
+  </p>
+  <p class="txt3">내용3</p>
+</body>
+</html>

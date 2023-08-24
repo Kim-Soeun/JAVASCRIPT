@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+  <style>
+    #main {
+      width: 400px;
+      margin: 50px auto;
+      text-align: center;
+      border: 3px solid lightgray;
+    }
+    #main img {
+      position: relative;
+    }
+  </style>
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script>
+    $(function(){
+      // 첫번째 그림 클릭하면 위로 올라갔다가 내려오기
+      // 두번째 그림 더블클릭하면 위로 올라갔다가 내려오기
+      // 세번째 그림 클릭하면 위로 올라가기
+      // 네번째 그림 더블클릭하면 아래로 내려가기
+
+      $("#bird1").on("click", function(){
+        $(this).animate({top:'-=100'}, 500);
+        $("#bird1").animate({top:0}, 500);
+      });
+
+      $("#bird2").on("dblclick", function(){
+        $(this).animate({top:-100}, 500);
+        $("#bird2").animate({top:0}, 500);
+      });
+
+      $("#bird3").on("click", function(){
+        $(this).animate({bottom:'+=100'}, 200);
+      });
+
+      $("#dog1").on("dblclick", function(){
+        $(this).animate({bottom:'-=100'}, 200);
+      });
+
+    });
+  </script>
+</head>
+<body>
+  <div id="main">
+    <img src="images/bird17.gif" id="bird1">
+    <img src="images/bird20.gif" id="bird2">
+    <img src="images/bird28.gif" id="bird3">
+    <img src="images/shiba2.gif" id="dog1">
+  </div>
+</body>
+</html>
