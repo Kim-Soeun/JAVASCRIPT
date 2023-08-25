@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+ 
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script>
+    $(function(){
+
+      $("#user_id_1, #user_pw_1").on("focus", 
+      function(){
+        $(this).css("background", "pink");
+      });
+      // 클릭해서 input 안에 포커스 맞춰지면 input 안 배경이 핑크로 변환
+      
+      $("#user_id_1, #user_pw_1").on("blur", 
+      function(){
+        $(this).css("background", "white");
+      });
+      // 클릭해서 input 안에 포커스 다른 요소로 이동되면 input 안 배경이 화이트로 변환
+
+
+      $("#frm_2").on("focusin", 
+      function(){
+        $(this).css("background-color", "pink");
+      });
+      // focusin : 대상 요소의 하위 요소 중 입력 요소로 포커스가 이동하면 이벤트 발생
+      
+      $("#frm_2").on("focusout", 
+      function(){
+        $(this).css("background", "white");
+      });
+      // focusout : 대상 요소의 하위 요소 중 입력 요소에서 외부 요소로 이동하면 이벤트 발생
+      
+    });
+  </script>
+</head>
+<body>
+  <form action="#">
+    <p>
+      <label for="user_id_1">아이디</label>
+      <input type="text" name="user_id_1" id="user_id_1">
+    </p>
+    <p>
+      <label for="user_pw_1">비밀번호</label>
+      <input type="password" name="user_pw_1" id="user_pw_1">
+    </p>
+  </form>
+
+  <form action="#" id="frm_2">
+    <p>
+      <label for="user_id_2">아이디2</label>
+      <input type="text" name="user_id_2" id="user_id_2">
+    </p>
+    <p>
+      <label for="user_pw_2">비밀번호2</label>
+      <input type="password" name="user_pw_2" id="user_pw_2">
+    </p>
+  </form>
+</body>
+</html>

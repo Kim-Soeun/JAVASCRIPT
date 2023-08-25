@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+  <style>
+    #main {
+      width: 300px;
+      height: 450px;
+      border: 5px solid transparent;
+      position: relative;
+      left: 130px;
+      top: 200px;
+      background: url('images/하늘.jpg');
+    }
+    #airplane {
+      position: relative;
+      bottom: -350px;
+      left: 100px;
+    }
+    #weapon {
+      position: relative;
+      display: none;
+    }
+  </style>
+ 
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script>
+   $(function(){
+    $(document).on("keydown", keyEventFnc);
+    // 문서(document)에 keydown 이벤트 등록
+    function keyEventFnc(e) {
+      switch (e.keyCode) {
+        case 37 :
+          $("#airplane").animate({left:'-=10'}, 10);
+          break;
+        case 39 :
+          $("#airplane").animate({left:'+=10'}, 10);
+          break;
+        case 38 :
+          $("#airplane").animate({top:'-=10'}, 10);
+          break;
+        case 40 :
+          $("#airplane").animate({top:'+=10'}, 10);
+          break;
+        case 32 :
+          $("#weapon").css({
+            "top" : $("#airplane").css("top"),
+            "left" : $("#airplane").css("left")
+          });
+          $("#weapon").css({
+            "top" : "-=80",
+            "left" : "-=80"
+          });
+          $("#weapon").css("display", "inline-block");
+          $("#weapon").animate({top:'-50'}, 1000);
+          setTimeout(function(){
+            $("#weapon").css("display", "none");
+          }, 1000);
+
+          break;
+
+      }
+    }
+  
+  });
+  </script>
+</head>
+<body>
+  <div id="main">
+    <img id="airplane" src="images/비행기.png">
+    <img id="weapon" src="images/미사일.png">
+  </div>
+</body>
+</html>
